@@ -1,0 +1,16 @@
+name: 'GitHub Pull Request Reviewer Assistant'
+description: 'GitHub Pull Request Reviewer Assistant'
+inputs:
+  github_token:
+    description: 'GitHub token'
+    default: ${{ github.token }}
+    required: true
+  pull_request_id:
+    description: 'Pull Request ID'
+    required: true
+  comment_id:
+    description: 'Comment ID'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/main.js'
